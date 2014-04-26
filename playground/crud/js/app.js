@@ -11,7 +11,7 @@ crudApp.config(['$routeProvider',
     
     $routeProvider.
       when('/contacts', { 
-        templateUrl : 'partials/contacts.html',
+        templateUrl : '/crud/partials/contacts.html',
         controller  : 'crudController'
       })
       .otherwise({
