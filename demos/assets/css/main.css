@@ -17,3 +17,24 @@ body{
 .card p{
 	font-size: 1.4em;
 	color : #666666;}
+
+.up{
+	color: green;}
+
+.down{
+	color: red;}
+
+table{
+	width: 100%;
+}
+table thead{
+	background: #e82634;
+	color: white;
+}
+table .odd{
+	background: #ddd;
+}
+table tfoot{
+	background: #999;
+	color: white;
+}
