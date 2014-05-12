@@ -1,0 +1,47 @@
+<div class="exercise">
+	<h4>Filtro en fechas</h4>
+	{{ today | date:'dd MMMM yyyy' }}<br/>
+	{{ today | date:'dd/mm/yyyy' }}<br/>
+	{{ today | date:'dd MMMM yyyy HH:mm:ss' }}
+</div>
+
+<div class="exercise">
+	<h4>Filtros en textos</h4>
+	{{ "todo en mayúsculas" | uppercase}} <br/>
+	{{ "TODO A MINÚSCULAS" | lowercase}} <br/>
+	Imprimiendo un JSON : {{ {foo: "bar", baz: 23} | json }} <br/>
+</div>
+
+<div class="exercise">
+	<h4>Filtros en números</h4>
+	El monto de <b>{{ 1000 | currency : "MXN $"}}</b> 
+	equivale a : {{ 1000/13.50 | currency: "USD $"}}	
+	{{ 1000/18.50 | currency: "€ "}}
+	<br/>
+	Número sin formato :  {{ 12394.12598129 }}  <br/>
+	Formato de número : {{ 12394.12598129 | number}} <br/>
+	Formato a dos decimales {{ 12394.12598129 | number:2}} <br/>
+	Formato a tres decimales {{ 12394.12598129 | number:3}} <br/>
+</div>
+
+<div class="exercise">
+	<h4>Filtros customizados</h4>
+	<ul>
+		<li>{{"darth vader" | personalname}}</li>
+		<li>{{"obi wan kenobi" | personalname}}</li>
+		<li>{{"gandalf" | personalname}}</li>
+		<li>{{"bruce wayne" | personalname}}</li>
+	</ul>
+</div>
+
+<div class="exercise">
+	<h4>Ng-class</h4>
+	<ul>
+		<li ng-repeat="superhero in superheroes">
+				{{superhero.name}} 
+				<small>Fuerza :  
+					<span ng-class="{up : superhero.strenght > 5 , down : superhero.strenght <= 5}">{{superhero.strenght}}</span>
+				</small>
+			</li>
+	</ul>
+</div>

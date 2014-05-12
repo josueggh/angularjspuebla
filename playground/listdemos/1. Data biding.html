@@ -1,0 +1,14 @@
+<h4>Data binding</h4>
+<div class="exercise">
+  <input type="text" ng-model="nombre" placeholder="Escribe tu nombre" /> 
+  <br/>
+  Tú nombre es : {{ nombre }} 
+</div>
+
+<div class="exercise">
+  <input type="text" ng-model="ciudad" placeholder="Ciudad"> 
+  <br/>
+  <input type="text" ng-model="estado" placeholder="Estado"> 
+  <br/>
+  {{ ciudad }}  , {{estado}} a {{  today | date:'dd MMMM yyyy'}}. 
+</div>

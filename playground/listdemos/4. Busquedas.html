@@ -1,0 +1,30 @@
+<input type="text" ng-model="general_filter.$" placeholder="Superhéroe a buscar"> 
+<input type="text" ng-model="general_filter.name" placeholder="Superhéroe"> 
+<input type="text" ng-model="general_filter.realname" placeholder="Identidad"> 
+
+Ordernar por : 
+<select ng-model="orderSuperheroes"  ng-init="orderSuperheroes='name'">
+  <option value="name">Superhéroe</option>
+  <option value="realname">Identidad</option>
+</select>
+
+<table>
+  <thead>
+    <tr>
+      <th>Superhéroe</th>
+      <th>Identidad secreta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="superhero in superheroes_filtered =  (superheroes | filter : general_filter | orderBy: orderSuperheroes:false ) " ng-class="cls($index)">
+      <td>{{superhero.name}}</td>
+      <td>{{superhero.realname}}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Elementos encontrados : {{superheroes_filtered.length}}</td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>

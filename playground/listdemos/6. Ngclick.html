@@ -1,0 +1,49 @@
+<h4>Conoce al superhéroe</h4>
+<div class="row">
+  <div class="span3">
+    <ul class="list-heroes">
+      <li ng-repeat="superhero in superheroes" ng-click="selectSuperHero(superhero)">{{superhero.name}}</li>
+    </ul>
+  </div>
+  <div class="span3" ng-show="myhero.name">
+    <div class="hero-card">
+      <hero-avatar data-name="{{myhero.name}}"></hero-avatar>
+      <h3>{{myhero.name}}</h3>
+      <h4>{{myhero.realname}}</h4>
+      <ul>
+        <li class="inteligencia">
+          Inteligencia
+          <div class="bar">
+            <span style="width:{{myhero.intelligence/10*100}}px" 
+                  ng-class="{red:myhero.intelligence<4 , green:myhero.intelligence>6}">
+            </span>
+          </div>
+        </li>
+        <li class="fuerza">
+          Fuerza
+          <div class="bar">
+            <span style="width:{{myhero.strenght/10*100}}px" 
+                  ng-class="{red:myhero.strenght<4 , green:myhero.strenght>6}">
+            </span>
+          </div>
+        </li>
+        <li class="velocidad">
+          Velocidad
+          <div class="bar">
+            <span style="width:{{myhero.speed/10*100}}px" 
+                  ng-class="{red:myhero.speed<4 , green:myhero.speed>6}">
+            </span>
+          </div>
+        </li>
+        <li class="defensa">
+          Defensa
+           <div class="bar">
+            <span style="width:{{myhero.defence/10*100}}px" 
+                  ng-class="{red:myhero.defence<4 , green:myhero.defence>6}">
+            </span>
+          </div>
+        </li>
+      </ul>  
+    </div>  
+  </di>
+</div>

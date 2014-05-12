@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="pueblaApp">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Taller AngularJS Puebla</title>
+
+  <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+  <link href="./assets/css/prettify.css" rel="stylesheet" />
+  <link href="./assets/css/main.css" rel="stylesheet" />
+
+</head>
+
+<body data-ng-controller="pueblaController">
+  <h2>
+    <img src="./assets/img/angularShield.png">ngularJS - Taller ComunidadPHP Puebla
+  </h2>
+
+  <div class="row">
+    <div class="span3 section">
+      <ol>
+        <li data-ng-repeat="demo in demos">
+          <a href="{{href}}" data-ng-click="loadDemo(demo)" >{{demo.title}}</a>
+        </li>
+      </ol>
+    </div>
+    <div class="span9">
+      <ng-include src="demo_template"></ng-include>
+
+      <div ng-show="demo_template">
+        <h4>Code : </h4>
+
+        <?prettify lang=html linenums=true?>
+        {{demo_code}}
+        <pre class="prettyprint"  id="code">{{demo_code}}</pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/angular.js"></script>
+  <script src="./assets/js/main.js"></script>
+  
+  <script src="./assets/js/prettify.js"></script>
+  <script src="./assets/js/run_prettify.js?autoload=true&amp;lang=css"></script>
+</body>
+</html>
