@@ -20,7 +20,7 @@ Para poder ejecutar todos los demos incluyendo el de CRUD, si se cuenta con PHP 
 En caso de no contar con PHP 5.4 > , se necesita configurar un VirtualHost en nuestro servidor web.
 
 
-**Apache : **
+**Apache :**
 ```puppet
 <VirtualHost *:80>
     ServerAdmin admin@localhost
