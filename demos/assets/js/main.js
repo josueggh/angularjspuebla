@@ -32,6 +32,16 @@ pueblaApp.controller('pueblaController', function ($scope, $templateCache, $http
     $scope.myhero = superhero;
   }
 
+
+  $scope.datarequested  = null;  
+  $scope.loadData = function(type){
+
+    $http({method : 'get' , url:"/assets/json/data.json"})
+      .success( function(data,status) {  
+        $scope.datarequested  = data[type];
+    });
+  }
+
   /*Fin de las variables para los demos*/
 
   /**Construcción del PlayGround**/
@@ -46,7 +56,7 @@ pueblaApp.controller('pueblaController', function ($scope, $templateCache, $http
     {'title' : 'Búsquedas y order' ,  url : urlBase+'4. Busquedas.html'},
     {'title' : 'Directivas' ,         url : urlBase+'5. Directivas.html'},
     {'title' : 'Ng-click',            url : urlBase+'6. Ngclick.html'},
-    {'title' : 'Http Requests',       url : urlBase+'1. Ngrepeat.html'},
+    {'title' : 'Http Requests',       url : urlBase+'7. Http.html'},
     {'title' : 'CRUD' ,               url : urlBase+'1. Ngrepeat.html'},
     {'title' : 'Extras' ,             url : urlBase+'1. Ngrepeat.html'},
     {'title' : 'Keep in touch' ,      url : urlBase+'0. A cerca de.html'},

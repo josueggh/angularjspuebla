@@ -59,3 +59,23 @@ table{
 		background: red;}
 	.bar span.green{
 		background: green;}
+
+.hero-card{
+	background: #f4f4f4;
+	border: 3px solid #eeeeee;
+	text-align:center;
+	padding: 4px;}
+
+	.hero-card img{
+		border:3px solid white;
+	}
+	.hero-card h3{
+		line-height: 20px;
+	}
+	.hero-card h4{
+		color: #888889;
+	}
+	.hero-card ul li{
+		list-style: none;
+		text-align:left;
+	}
