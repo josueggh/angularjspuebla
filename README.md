@@ -3,6 +3,7 @@ AngularJS - Comunidad PHP
 
 ## Directorios
 *   **playground** : Colección de los demos presentados
+*   **crud** : Ejemplo de CRUD (Create , Read, Update , Delete)
 *   **docs** : Presentación PPT, Keynote y archivo PDF con el tutorial
 *   **demos** : Demos generados de manera independiente al playground
 *   **server** : Colección de documentos PHP necesarios para el demo de CRUD

@@ -1,0 +1,18 @@
+<input type="text" ng-model="newContact.name" placeholder="Nombre">
+<input type="text" ng-model="newContact.lastname" placeholder="Apellido">
+<input type="text" ng-model="newContact.ciudad" placeholder="Apellido">
+<input type="text" ng-model="newContact.telefono" placeholder="Apellido">
+<input type="text" ng-model="newContact.mail" placeholder="E-mail">
+<input type="text" ng-model="newContact.edad" placeholder="Edad">
+
+<button ng-click="addContact()">Agregar contacto</button>
+
+<div ng-repeat="contact in list">
+	<h3>{{contact.name}} {{contact.lastname}}</h3>
+	<ul>
+		<li>Ciudad de nacimiento :  {{contact.ciudad}}</li>
+		<li>Telefono : {{contact.telefono}}</li>
+		<li>Mail : {{contact.mail}}</li>
+		<li>Edad : {{contact.edad}}</li>
+	</ul>
+</div>

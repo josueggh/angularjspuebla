@@ -57,7 +57,7 @@ pueblaApp.controller('pueblaController', function ($scope, $templateCache, $http
     {'title' : 'Directivas' ,         url : urlBase+'5. Directivas.html'},
     {'title' : 'Ng-click',            url : urlBase+'6. Ngclick.html'},
     {'title' : 'Http Requests',       url : urlBase+'7. Http.html'},
-    {'title' : 'CRUD' ,               url : urlBase+'1. Ngrepeat.html'},
+    {'title' : 'CRUD' ,               href: '/crud'},
     {'title' : 'Extras' ,             url : urlBase+'1. Ngrepeat.html'},
     {'title' : 'Keep in touch' ,      url : urlBase+'0. A cerca de.html'},
   ];
