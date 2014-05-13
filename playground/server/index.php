@@ -52,7 +52,7 @@ $app->post ('/contact/:id' , function($id) use($db, $app){
 	$contact 	= (array) json_decode($body);
 
 	$db->where('id' , $id);
-	if($db->delete('contacts')){
+	if($db->update('contacts', $contact)){
 		echo json_encode( array('message'=>'successfully updated') ); 
 	}else{
 		echo json_encode( array('message'=>'not updated') ); 
