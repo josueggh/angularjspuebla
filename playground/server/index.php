@@ -27,7 +27,7 @@ $app->get ('/contact',		function() use ($db){
 $app->post('/contact' , function() use ($db, $app) {
 	$request 	= $app->request();	
 	$body 		= $request->getBody();
-	$contact 	= json_decode($body);
+	$contact 	= (array) json_decode($body);
 	print_r($contact);
 	$id 			= $db->insert('contacts' , $contact);
 

@@ -9,6 +9,8 @@ crudControllers.controller( 'crudController' ,
 				var newContact = {
 					'name' 			: $scope.newContact.name,
 					'lastname' 	: $scope.newContact.lastname,
+					'ciudad'		: $scope.newContact.ciudad,
+					'telefono'	: $scope.newContact.telefono,
 					'mail' 			: $scope.newContact.mail,
 					'edad' 			: $scope.newContact.edad,
 				}
