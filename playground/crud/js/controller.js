@@ -14,7 +14,19 @@ crudControllers.controller( 'crudController' ,
 					'mail' 			: $scope.newContact.mail,
 					'edad' 			: $scope.newContact.edad,
 				}
-				Crud.save( newContact );
+				var savedContact = Crud.save( newContact );
+				$scope.list.push ( savedContact );
+			}
+
+			$scope.deleteContact = function(index){
+				Crud.delete( { id: $scope.list[index].id } );
+				$scope.list.splice(index,1);
+			}
+
+			$scope.updateContact = function(index){
+				$scope.list[index].edad += 1;
+				console.log($scope.list[index].id);
+				Crud.update( { id: $scope.list[index].id} , {edad:$scope.list[index].edad});
 			}
 
 		}

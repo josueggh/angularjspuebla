@@ -9,10 +9,11 @@
 
 <div ng-repeat="contact in list">
 	<h3>{{contact.name}} {{contact.lastname}}</h3>
+	<button ng-click="deleteContact($index)">Borrar</button>
 	<ul>
 		<li>Ciudad de nacimiento :  {{contact.ciudad}}</li>
 		<li>Telefono : {{contact.telefono}}</li>
 		<li>Mail : {{contact.mail}}</li>
-		<li>Edad : {{contact.edad}}</li>
+		<li>Edad : {{contact.edad}} <button ng-click="updateContact($index)">+</button></li>
 	</ul>
 </div>

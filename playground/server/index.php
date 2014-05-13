@@ -28,17 +28,37 @@ $app->post('/contact' , function() use ($db, $app) {
 	$request 	= $app->request();	
 	$body 		= $request->getBody();
 	$contact 	= (array) json_decode($body);
-	print_r($contact);
 	$id 			= $db->insert('contacts' , $contact);
 
-	$db->where("id" , $id);
-	$user 		= $db->getOne("contacts");
+	$db->where('id' , $id);
+	$user 		= $db->getOne('contacts');
 	echo json_encode($user);
 
 });
 
-// $app->put ('/contact/:id', 	'updateContact');
-// $app->get ('/contact/:id', 	'deleteContact');
+$app->get ('/contact/:id' , function($id) use ($db){
+	$db->where('id' , $id);
+
+	if($db->delete('contacts')){
+		echo json_encode( array('message'=>'successfully deleted') ); 
+	}else{
+		echo json_encode( array('message'=>'not deleted') ); 
+	}
+});
+
+$app->post ('/contact/:id' , function($id) use($db, $app){
+	$request 	= $app->request();	
+	$body 		= $request->getBody();
+	$contact 	= (array) json_decode($body);
+
+	$db->where('id' , $id);
+	if($db->delete('contacts')){
+		echo json_encode( array('message'=>'successfully updated') ); 
+	}else{
+		echo json_encode( array('message'=>'not updated') ); 
+	}
+
+});
 
 $app->run();
 
