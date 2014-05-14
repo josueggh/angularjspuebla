@@ -1,19 +1,29 @@
-<input type="text" ng-model="newContact.name" placeholder="Nombre">
-<input type="text" ng-model="newContact.lastname" placeholder="Apellido">
-<input type="text" ng-model="newContact.ciudad" placeholder="Ciudad">
-<input type="text" ng-model="newContact.telefono" placeholder="Telefono">
-<input type="text" ng-model="newContact.mail" placeholder="E-mail">
-<input type="text" ng-model="newContact.edad" placeholder="Edad">
+<div class="row margined">
+  <div class="span3">
+    <img src="../assets/img/angularShield.png">
+    <div class="form">
+    <input type="text" ng-model="newContact.name" placeholder="Nombre">
+    <input type="text" ng-model="newContact.lastname" placeholder="Apellido">
+    <input type="text" ng-model="newContact.ciudad" placeholder="Ciudad">
+    <input type="text" ng-model="newContact.telefono" placeholder="Telefono">
+    <input type="text" ng-model="newContact.mail" placeholder="E-mail">
+    <input type="text" ng-model="newContact.edad" placeholder="Edad">
 
-<button ng-click="addContact()">Agregar contacto</button>
+    <button ng-click="addContact()">Agregar contacto</button>
+  </div>
+  </div>
 
-<div ng-repeat="contact in list">
-	<h3>{{contact.name}} {{contact.lastname}}</h3>
-	<button ng-click="deleteContact($index)">Borrar</button>
-	<ul>
-		<li>Ciudad de nacimiento :  {{contact.ciudad}}</li>
-		<li>Telefono : {{contact.telefono}}</li>
-		<li>Mail : {{contact.mail}}</li>
-		<li>Edad : {{contact.edad}} <button ng-click="updateContact($index)">+</button></li>
-	</ul>
+  <div class="span9">
+    <div ng-repeat="contact in list" class="contact-block">
+      <button class="delete" ng-click="deleteContact($index)">x</button>
+      <h3>{{contact.name}} {{contact.lastname}}</h3>
+      
+      <ul>
+        <li><span>Ciudad de nacimiento :</span>  {{contact.ciudad}}</li>
+        <li><span>Telefono :</span> {{contact.telefono}}</li>
+        <li><span>Mail :</span> {{contact.mail}}</li>
+        <li><span>Edad :</span> {{contact.edad}} <button ng-click="updateContact($index)">+</button></li>
+      </ul>
+    </div>
+  </div>
 </div>
