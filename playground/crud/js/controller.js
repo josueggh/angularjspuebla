@@ -26,7 +26,6 @@ crudControllers.controller( 'crudController' ,
 
 			$scope.updateContact = function(index){
 				$scope.list[index].edad += 1;
-				console.log('update');
 				Crud.update( { id: $scope.list[index].id} , {edad:$scope.list[index].edad});
 			}
 

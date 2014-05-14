@@ -1,12 +1,10 @@
-AngularJS - Comunidad PHP
+AngularJS - Taller Comunidad PHP
 ===============
 
 ## Directorios
 *   **playground** : Colección de los demos presentados
-*   **docs** : Presentación PPT, Keynote y archivo PDF con el tutorial
-*   **demos** : Demos generados de manera independiente al playground
-*   **server** : Colección de documentos PHP necesarios para el demo de CRUD
-
+*   **seed** : Archivo base para ejecutar AngularJS
+*   **sql**  : Respaldos de BD
 
 ## Ejecutando el playground
 Para ejecutar el playground y los demos que solo requieren de Javascript se puede hacer de la siguiente manera:
