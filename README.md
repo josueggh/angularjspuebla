@@ -2,6 +2,7 @@ AngularJS - Taller Comunidad PHP
 ===============
 
 ## Directorios
+*   **docs** : Presentaciones y manual
 *   **playground** : Colección de los demos presentados
 *   **seed** : Archivo base para ejecutar AngularJS
 *   **sql**  : Respaldos de BD

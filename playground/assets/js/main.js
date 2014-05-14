@@ -5,6 +5,7 @@ pueblaApp.controller('pueblaController', function ($scope, $templateCache, $http
   /*+Variables para los demos**/
   /*Fecha de Hoy*/
   $scope.today = Date.now();
+  $scope.nombre = "Josue";
 
   /*Lista de super heroés*/
   $scope.superheroes = [
@@ -58,7 +59,6 @@ pueblaApp.controller('pueblaController', function ($scope, $templateCache, $http
     {'title' : 'Ng-click',            url : urlBase+'6. Ngclick.html'},
     {'title' : 'Http Requests',       url : urlBase+'7. Http.html'},
     {'title' : 'CRUD' ,               href: '/crud'},
-    {'title' : 'Extras' ,             url : urlBase+'1. Ngrepeat.html'},
     {'title' : 'Keep in touch' ,      url : urlBase+'0. A cerca de.html'},
   ];
 
